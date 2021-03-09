@@ -2,7 +2,7 @@
 ### Introduction <h3>
 A startup called Sparkify wants to analyze the data they have been collecting on songs and user activity on their new music streaming app. The analytics team is particularly interested in understanding what songs users are listening to. Currently, they don't have an easy way to query their data, which resides in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 
-The analytics team wanted a data enginner, like you, to create a Postgres database with tables designed to optimize queries on song play analysis. Your task is to create a database schema and ETL pipeline for this analysis. Then test your database and ETL pipeline by running queries given to you by the Sparkify's analytics team and compare your results with their expected results.
+The analytics team wanted a data enginner like you to create a Postgres database with tables designed to optimize queries on song play analysis. Your task is to create a database schema and ETL pipeline for this analysis. Then test your database and ETL pipeline by running queries given to you by the Sparkify's analytics team and compare your results with their expected results.
 
 ## 1. Database design description <h2>
 Using two source datasets, one called "song" and another "log" to create a star schema database optimized for queries on song play analysis. This includes the following tables:
@@ -14,7 +14,7 @@ Using two source datasets, one called "song" and another "log" to create a star 
 * users - keeps unique user details with the following columns: user_id (PK), first_name, last_name, gender, level.
 * songs - records unique song details with the following columns: song_id (PK), title, artist_id, year, duration.
 * artists - stores unique artist details with the following columns: artist_id (PK), name, location, latitude, longitude.
-* time - maintains unique time details with the following columns: start_time (PK), hour, day, week, month, year, weekday.
+* time - maintains unique timestamps of songplay records with the following columns: start_time (PK), hour, day, week, month, year, weekday.
 
 ## 2. Files in the project workspace <h2>
 In addition to the data/song_data and data/log_data files, the project workspace has the following components:

@@ -7,10 +7,10 @@ The analytics team wanted a data enginner, like you, to create a Postgres databa
 ## 1. Database design description <h2>
 Using two source datasets, one called "song" and another "log" to create a star schema database optimized for queries on song play analysis. This includes the following tables:
 
-### 1.1 Fact Table <h3>
+### 1.1 Fact table <h3>
 * songplays - records in "log" data associated with song plays i.e. records with page NextSong. It has the following columns: songplay_id (PK), start_time, user_id, level, song_id, artist_id, session_id, location, user_agent. NOTE: PK denotes PRIMARY KEY.
   
-### 1.2 Dimension Tables <h3>
+### 1.2 Dimension tables <h3>
 * users - keeps unique user details with the following columns: user_id (PK), first_name, last_name, gender, level.
 * songs - records unique song details with the following columns: song_id (PK), title, artist_id, year, duration.
 * artists - stores unique artist details with the following columns: artist_id (PK), name, location, latitude, longitude.
@@ -45,3 +45,11 @@ This jupyter notedbook contains instructions to check the database construction 
 This script does the following:
 
 * Reads, processes and loads data from the song_data and log_data files into the tables created in the previous steps
+
+## 3. User guide <h2>
+To populate the tables with the data from the entire dataset of the two sources, run the following scripts in the command line window:
+
+* Enter "python create_tables.py", followed by the return key
+* Enter "python etl.py", followed by the return key
+
+After the above steps had completed, one can execute the steps in the test.ipynb scripts to perform high level data quality checks. 

@@ -52,4 +52,4 @@ To populate the tables with the data from the entire dataset of the two sources,
 * Enter "python create_tables.py", followed by the return key
 * Enter "python etl.py", followed by the return key
 
-After the above steps had completed, one can execute the steps in the test.ipynb scripts to perform data quality checks. 
+After the above steps had completed, one can execute the steps in the script test.ipynb to perform data quality checks. 

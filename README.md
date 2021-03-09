@@ -22,26 +22,26 @@ In addition to the data/song_data and data/log_data files, the project workspace
 ### 2.1 create_tables.py <h3>
 This script does the following:
 
-* Drops (if exists) and Creates the sparkify database
-* Set ups connection with the sparkify database and gets cursor to it
-* Drops all the tables (by calling the script "sql_queries"
-* Creates all tables needed
-* Closes the connection
+* Drops (if exists) and creates the sparkify database
+* Establishes connection with the sparkify database and gets the database cursor
+* Calls the script "drop_table_queries" to drop all the sparkify's tables 
+* Calls the script "create_table_queries" to create all the sparkify's tables
+* Closes the database connection
 
 ### 2.2 sql_queries.py <h3>
 This script does the following:
 
-* Drops (if exists) all the tables once called by the script "create_tables"
-* Creates all tables once called by the script "create_tables"
-* Insert records into tables extracted from the source datasets
+* Drops all the tables with the script "drop_tables_queries"
+* Creates all the tables with the script "create_tables_queries"
+* Inserts records into various tables when called by the ETL pipeline
 
 ### 2.3 etl.ipynb <h3>
-This jupyter notedbook was used to develop the code used in the "etl.py" script.
+This jupyter notedbook contains detailed instructions on the ETL process of each of the tables.
 
 ### 2.4 test.ipynb <h3>
-This jupyter notedbook was used to test that the code developed in "etl.ipynb" performs as expected and populates the intended tables with the correct information.
+This jupyter notedbook contains instructions to check the database construction process. 
 
 ### 2.5 etl.py <h3>
 This script does the following:
 
-* Extracts, transforms and loads data into the tables already created in by the "create_tables.py" script
+* Reads, processes and loads data from the song_data and log_data files into the tables created in the previous steps

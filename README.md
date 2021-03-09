@@ -8,10 +8,10 @@ The analytics team wanted a data enginner, like you, to create a Postgres databa
 There are two source datasets, one called "song" and another "log". And from these two datasetes the following star schema database will been created for optimized queries on song play analysis. The tables are as below:
 
 ### 1.1 Fact Table <h3>
-The fact table in this star scheme will be named "songplays" and is designed to record "log" data associated with song plays. This fact table will have the following columns: songplay_id (PK), start_time, user_id, level, song_id, artist_id, session_id, location, user_agent. NOTE: PK denotes PRIMARY KEY.
+* songplays - records in "log" data associated with song plays i.e. records with page NextSong. This table will have the following columns: songplay_id (PK), start_time, user_id, level, song_id, artist_id, session_id, location, user_agent. NOTE: PK denotes PRIMARY KEY.
   
 ### 1.2 Dimension Tables <h3>
-* users - This table will be used to record unique user details. This table will have the following columns: user_id (PK), first_name, last_name, gender, level.
-* songs - This table will be used to record unique song details. This table will have the following columns: song_id (PK), title, artist_id, year, duration.
-* artists - This table will be used to record unique artist details. This table will have the following columns: artist_id (PK), name, location, latitude, longitude.
-* time - This table will be used to record unique time details. This table will have the following columns: start_time (PK), hour, day, week, month, year, weekday
+* users - keeps unique user details with the following columns: user_id (PK), first_name, last_name, gender, level.
+* songs - records unique song details with the following columns: song_id (PK), title, artist_id, year, duration.
+* artists - stores unique artist details with the following columns: artist_id (PK), name, location, latitude, longitude.
+* time - maintains unique time details with the following columns: start_time (PK), hour, day, week, month, year, weekday.

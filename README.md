@@ -8,7 +8,7 @@ The analytics team wanted a data enginner like you to create a Postgres database
 Using two source datasets, one called "song" and another "log" to create a star schema database optimized for queries on song play analysis. This includes the following tables:
 
 ### 1.1 Fact table <h3>
-* songplays - records in "log" data associated with song plays i.e. records with page NextSong. It has the following columns: songplay_id (PK), start_time, user_id, level, song_id, artist_id, session_id, location, user_agent. NOTE: PK denotes PRIMARY KEY.
+* songplays - records in "log" data associated with song plays i.e. records with page NextSong. It has the following columns: songplay_id (PK), start_time, user_id, level, song_id, artist_id, session_id, location, user_agent. NOTE: PK denotes PRIMARY KEY; FK denotes FOREIGN KEY.
   
 ### 1.2 Dimension tables <h3>
 * users - keeps unique user details with the following columns: user_id (PK), first_name, last_name, gender, level.

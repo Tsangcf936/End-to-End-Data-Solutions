@@ -14,7 +14,10 @@ Using two source datasets, one called "song" and another "log" to create a star 
 * users - keeps unique user details with the following columns: user_id (PK), first_name, last_name, gender, level.
 * songs - records unique song details with the following columns: song_id (PK), title, artist_id, year, duration.
 * artists - stores unique artist details with the following columns: artist_id (PK), name, location, latitude, longitude.
-* time - maintains unique timestamps of songplay records with the following columns: start_time (PK), hour, day, week, month, year, weekday.
+* time - maintains unique time details with the following columns: start_time (PK), hour, day, week, month, year, weekday.
+
+### 1.3 ERD Diagram <h3>
+!(https://r766469c826263xjupyterllyjhwqkl.udacity-student-workspaces.com/lab/tree/sparkify_db.png)
 
 ## 2. Files in the project workspace <h2>
 In addition to the data/song_data and data/log_data files, the project workspace has the following components:
@@ -52,4 +55,4 @@ To populate the tables with the data from the entire dataset of the two sources,
 * Enter "python create_tables.py", followed by the return key
 * Enter "python etl.py", followed by the return key
 
-After the above steps had completed, one can execute the steps in the script test.ipynb to perform data quality checks. 
+After the above steps had completed, one can execute the steps in the test.ipynb scripts to perform data quality checks. 

@@ -14,12 +14,16 @@ CREATE TABLE IF NOT EXISTS songplays
     songplay_id SERIAL PRIMARY KEY,
     start_time TIMESTAMP,
     user_id INTEGER,
-    level VARCHAR(10),
-    song_id VARCHAR(20),
-    artist_id VARCHAR(20),
+    level VARCHAR,
+    song_id VARCHAR,
+    artist_id VARCHAR,
     session_id INTEGER,
-    location VARCHAR(50),
-    user_agent VARCHAR(150)
+    location VARCHAR,
+    user_agent VARCHAR,
+    FOREIGN KEY (start_time) REFERENCES time (start_time),
+    FOREIGN KEY (user_id) REFERENCES users (user_id),
+    FOREIGN KEY (song_id) REFERENCES songs (song_id),
+    FOREIGN KEY (artist_id) REFERENCES artists (artist_id)
 );
 """)
 
@@ -27,32 +31,32 @@ user_table_create = ("""
 CREATE TABLE IF NOT EXISTS users 
 (
     user_id INTEGER PRIMARY KEY,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
-    gender CHAR(1),
-    level VARCHAR(10)
+    first_name VARCHAR,
+    last_name VARCHAR,
+    gender VARCHAR,
+    level VARCHAR
 );
 """)
 
 song_table_create = ("""
 CREATE TABLE IF NOT EXISTS songs 
 (
-    song_id VARCHAR(20) PRIMARY KEY,
-    title VARCHAR(100),
-    artist_id VARCHAR(20) NOT NULL,
+    song_id VARCHAR PRIMARY KEY,
+    title VARCHAR,
+    artist_id VARCHAR,
     year INTEGER,
-    duration FLOAT(5)
+    duration FLOAT
 );
 """)
 
 artist_table_create = ("""
 CREATE TABLE IF NOT EXISTS artists 
 (
-    artist_id VARCHAR(20) PRIMARY KEY,
-    name VARCHAR(100),
-    location VARCHAR(100),
-    latitude FLOAT(5),
-    longitude FLOAT(5)
+    artist_id VARCHAR PRIMARY KEY,
+    name VARCHAR,
+    location VARCHAR,
+    latitude FLOAT,
+    longitude FLOAT
 );
 """)
 
@@ -150,5 +154,5 @@ WHERE s.title = %s
 
 # QUERY LISTS
 
-create_table_queries = [songplay_table_create, user_table_create, song_table_create, artist_table_create, time_table_create]
+create_table_queries = [user_table_create, song_table_create, artist_table_create, time_table_create, songplay_table_create]
 drop_table_queries = [songplay_table_drop, user_table_drop, song_table_drop, artist_table_drop, time_table_drop]

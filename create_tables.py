@@ -4,7 +4,9 @@ from sql_queries import create_table_queries, drop_table_queries
 
 def create_database():
     """
-    - Creates and connects to the sparkifydb
+    - Connects with the default database
+    - Drops sparkifydb if it exists, and is then created. A connection to sparkify is established after the default database 
+      is disconnected
     - Returns the connection and cursor to sparkifydb
     """
     

@@ -17,7 +17,7 @@ Using two source datasets, one called "song" and another "log" to create a star 
 * time - maintains unique time details with the following columns: start_time (PK), hour, day, week, month, year, weekday.
 
 ### 1.3 ERD Diagram <h3>
-(https://github.com/cftg2008/Udacity-Data-Engineering-P1-Data-Modeling-With-Postgres/blob/main/sparkify_db.png)
+![ERD image](https://github.com/cftg2008/Udacity-Data-Engineering-P1-Data-Modeling-With-Postgres/blob/main/sparkify_db.png)
 
 ## 2. Files in the project workspace <h2>
 In addition to the data/song_data and data/log_data files, the project workspace has the following components:

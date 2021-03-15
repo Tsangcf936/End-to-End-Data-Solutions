@@ -52,7 +52,7 @@ This script does the following:
 ## 3. User guide <h2>
 To populate the tables with the data from the entire dataset of the two sources, run the following scripts in the command line window:
 
-* Enter "python create_tables.py", followed by the return key
-* Enter "python etl.py", followed by the return key
+* Enter "python3 create_tables.py", follow by the return key
+* Enter "python3 etl.py", follow by the return key
 
 After the above steps had completed, one can execute the steps in the test.ipynb scripts to perform data quality checks. 

@@ -77,7 +77,6 @@ CREATE TABLE IF NOT EXISTS time
 
 songplay_table_insert = ("""
 INSERT INTO songplays (
-    songplay_id,
     start_time,
     user_id,
     level,
@@ -86,8 +85,7 @@ INSERT INTO songplays (
     session_id,
     location,
     user_agent)
-VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-ON CONFLICT (songplay_id) DO NOTHING;
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s);
 """)
 
 user_table_insert = ("""
